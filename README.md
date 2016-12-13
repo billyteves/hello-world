@@ -1,22 +1,17 @@
 docker-hello-world
 ==================
 
-**This image will be deprecated soon. Please use `dockercloud/hello-world` instead:**
-https://hub.docker.com/r/dockercloud/hello-world/
-
-Sample docker image to test docker deployments
-
 
 Usage
 -----
 
-To create the image `tutum/hello-world`, execute the following command on the docker-hello-world folder:
+To create the image `billyteves/hello-world`, execute the following command on the docker-hello-world folder:
 
-	docker build -t tutum/hello-world .
+	docker build -t billyteves/hello-world .
 
 You can now push your new image to the registry:
 
-	sudo docker push tutum/hello-world
+	sudo docker push billyteves/hello-world
 
 
 Running your Hello World docker image
@@ -24,17 +19,10 @@ Running your Hello World docker image
 
 Start your image:
 
-	sudo docker run -d -p 80 tutum/hello-world
-
-It will print the new container ID (like `d35bf1374e88`). Get the allocated external port:
-
-	sudo docker port d35bf1374e88 80
-
-It will print the allocated port (like 4751). Test your deployment:
-
-	curl http://localhost:4751/
-
+	sudo docker run -d -p 8080:80 billyteves/hello-world
 
 Hello world!
+This source code is copied and modified. 
 
-**by http://www.tutum.co**
+A big credits to:
+**http://www.tutum.co**
