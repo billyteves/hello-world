@@ -1,0 +1,25 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: billy-helloworld
+  labels:
+    app: billy-helloworld
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: billy-helloworld
+      name: billy-helloworld
+    spec:
+      containers:
+        - name: billy-helloworld
+          image: billyteves/hello-world:latest
+          ports:
+            -
+              containerPort: 80
+              name: "http"
+              protocol: "TCP"
+          env:
+            - name: TEST_ENV
+              value: "I AM TEST"
