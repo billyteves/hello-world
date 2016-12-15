@@ -4,10 +4,10 @@ metadata:
   name: billy-helloworld
 spec:
   ports:
-    - port: 8888
+    - port: 80
       targetPort: 80
       name: "http"
   selector:
     app: billy-helloworld
-  type: NodePort
+  type: LoadBalancer
 
